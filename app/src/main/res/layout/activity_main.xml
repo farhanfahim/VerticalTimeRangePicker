@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_gravity="right"
+    tools:context=".MainActivity">
+
+
+
+
+    <com.jaygoo.widget.VerticalRangeSeekBar
+        android:id="@+id/timeRange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rsb_indicator_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="1dp"
+        app:rsb_indicator_padding_bottom="5dp"
+        app:rsb_indicator_padding_left="5dp"
+        app:rsb_indicator_padding_right="5dp"
+        app:rsb_indicator_padding_top="5dp"
+        app:rsb_indicator_show_mode="showWhenTouch"
+        app:rsb_indicator_background_color="#fff"
+        app:rsb_indicator_text_color="#000"
+        app:rsb_indicator_text_size="14sp"
+        app:rsb_indicator_width="wrap_content"
+        app:rsb_mode="range"
+        app:rsb_step_auto_bonding="false"
+        app:rsb_step_color="#fff"
+        app:rsb_step_height="360dp"
+        app:rsb_step_width="0.3dp"
+        app:rsb_steps="24"
+        app:rsb_tick_mark_number="24"
+        app:rsb_orientation="right"
+        app:rsb_min="12"
+        app:rsb_max="36.01"
+        app:rsb_progress_drawable="@drawable/foreground"
+        app:rsb_progress_height="360dp"
+        app:rsb_progress_drawable_default="@drawable/background"
+        app:rsb_thumb_width="0dp"
+        app:rsb_tick_mark_mode="other"
+        app:rsb_tick_mark_text_size="8sp"
+        app:rsb_tick_mark_text_color="#000"
+        app:rsb_tick_mark_text_array="@array/markArray"/>
+
+
+</RelativeLayout>
