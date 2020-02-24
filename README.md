@@ -3,10 +3,13 @@
 
 
 ## Android UI
+
 Date Picker
+
 <img src='images/Capture.PNG' height=480 width=300 />
 
 Time Range Pciker
+
 <img src='images/Capture1.PNG' height=480 width=300 />
 
 
