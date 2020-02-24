@@ -63,7 +63,23 @@ Time Range Picker Xml
  
 <img src='images/Capture1.PNG' height=480 width=300 />
 
+## Implementation
 
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+            
+ Add the dependency
+
+	dependencies {
+	        implementation 'com.github.farhanfahim:VerticalTimeRangeSeekBar:1.0'
+	}  
+            
 ## Usage
 
 The following snippet shows how you can use Vertical Time Range Picker in your project.
