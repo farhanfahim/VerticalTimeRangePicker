@@ -67,3 +67,52 @@ Time Range Picker Xml
 ## Usage
 
 The following snippet shows how you can use Vertical Time Range Picker in your project.
+
+### In Java
+
+Step #1
+
+        VerticalRangeSeekBar timeRange;
+        DatePicker datePicker;
+        VerticalTimeRangePicker verticalTimeRangePicker;
+            
+        timeRange = findViewById(R.id.timeRange);
+        datePicker = findViewById(R.id.datePicker);
+
+Step #2
+
+        verticalTimeRangePicker = new VerticalTimeRangePicker(timeRange, datePicker, MainActivity.this);
+
+        verticalTimeRangePicker.timeRangeInit(timeRange);
+        verticalTimeRangePicker.datePickerInit(datePicker);
+        verticalTimeRangePicker.dateChanged();
+        
+Step #3
+
+        onChangeListener=========================
+
+        timeRange.setOnRangeChangedListener(new OnRangeChangedListener() {
+            @Override
+            public void onRangeChanged(RangeSeekBar view, float leftValue, float rightValue, boolean isFromUser) {
+                verticalTimeRangePicker.onRangeChangedValue(leftValue, rightValue);
+            }
+
+            @Override
+            public void onStartTrackingTouch(RangeSeekBar view, boolean isLeft) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(RangeSeekBar view, boolean isLeft) {
+            }
+        });
+        
+        
+Step #4
+
+        callbacks=========================
+
+        verticalTimeRangePicker.getDate();
+        verticalTimeRangePicker.getStartHour();
+        verticalTimeRangePicker.getEndHour();
+        verticalTimeRangePicker.getStartMinutes();
+        verticalTimeRangePicker.getEndMinutes();
