@@ -6,7 +6,6 @@ Vertical time Range picker is a unique Time picker with Date Picker.
 
 Date Picker Xml
 
-<DatePicker
             android:id="@+id/datePicker"
             android:layout_gravity="center"
             android:layout_marginTop="42dp"
@@ -18,7 +17,7 @@ Date Picker Xml
             android:scaleX="1.2"
             android:scaleY="1.2"
             android:layout_marginBottom="20dp"
-            android:datePickerMode="calendar" />
+            android:datePickerMode="calendar"
         
 <img src='images/Capture.PNG' height=480 width=300 />
 
