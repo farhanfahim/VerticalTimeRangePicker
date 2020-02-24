@@ -18,7 +18,13 @@ public class VerticalTimeRangePicker implements CallbackListener {
     private int value2 = 0;
     private int value3 = 0;
     private int value4 = 0;
+    private String startHour = "0:0";
+    private String endHour = "0:0";
+    private String startMin = "0:0";
+    private String endMin = "0:0";
+
     private int day, month, year;
+    private String date="";
     private Context context;
 
     public VerticalTimeRangePicker(VerticalRangeSeekBar timeRange, DatePicker datePicker, Context context) {
@@ -38,8 +44,9 @@ public class VerticalTimeRangePicker implements CallbackListener {
         month = datePicker.getMonth() + 1;
         year = datePicker.getYear();
 
-        String date = (day + "/" + month + "/" + year);
-        getDate(date);
+        String currentDate = (day + "/" + month + "/" + year);
+        date = currentDate;
+        getDate();
     }
 
     public void onRangeChangedValue(float leftValue, float rightValue){
@@ -61,6 +68,10 @@ public class VerticalTimeRangePicker implements CallbackListener {
 
         String maxValue = changeSeekBarIndicator(timeRange.getRightSeekBar(),value3,value4);
         getProgressValues(minValue,maxValue);
+        startHour = minValue;
+        endHour = maxValue;
+        startMin = minValue;
+        endMin = maxValue;
     }
 
     private String changeSeekBarIndicator(SeekBar seekBar, float v1, float v2) {
@@ -140,8 +151,9 @@ public class VerticalTimeRangePicker implements CallbackListener {
             datePicker.setOnDateChangedListener(new DatePicker.OnDateChangedListener() {
                 @Override
                 public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    String date = (dayOfMonth + "/" + monthOfYear + "/" + year);
-                    getDate(date);
+                    date = (dayOfMonth + "/" + monthOfYear + "/" + year);
+                    getDate();
+
                 }
             });
         }
@@ -149,16 +161,18 @@ public class VerticalTimeRangePicker implements CallbackListener {
 
     @Override
     public void getProgressValues(String minValue, String maxValue) {
-        getStartHour(minValue);
-        getEndHour(maxValue);
-        getEndMinutes(maxValue);
-        getStartMinutes(minValue);
+        getStartHour();
+        getEndHour();
+        getEndMinutes();
+        getStartMinutes();
+        //Toast.makeText(context,getStartHour()+","+getStartMinutes()+","+getEndHour()+","+getEndMinutes(),Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public int getStartHour(String value) {
+    public int getStartHour() {
         try {
-            String[] arrOfStr = value.split(":");
+            String[] arrOfStr = startHour.split(":");
+            //Toast.makeText(context,startHour,Toast.LENGTH_SHORT).show();
             return Integer.parseInt(arrOfStr[0]);
         }catch (NumberFormatException e){
             return 0;
@@ -166,9 +180,10 @@ public class VerticalTimeRangePicker implements CallbackListener {
     }
 
     @Override
-    public int getEndHour(String value) {
+    public int getEndHour() {
         try {
-            String[] arrOfStr = value.split(":");
+            String[] arrOfStr = endHour.split(":");
+            //Toast.makeText(context,endHour,Toast.LENGTH_SHORT).show();
             return Integer.parseInt(arrOfStr[0]);
         }catch (NumberFormatException e){
             return 0;
@@ -176,9 +191,10 @@ public class VerticalTimeRangePicker implements CallbackListener {
     }
 
     @Override
-    public int getStartMinutes(String value) {
+    public int getStartMinutes() {
         try {
-            String[] arrOfStr = value.split(":");
+            String[] arrOfStr = startMin.split(":");
+            //Toast.makeText(context,startMin,Toast.LENGTH_SHORT).show();
             return Integer.parseInt(arrOfStr[1]);
         }catch (NumberFormatException e){
             return 0;
@@ -187,10 +203,11 @@ public class VerticalTimeRangePicker implements CallbackListener {
     }
 
     @Override
-    public int getEndMinutes(String value) {
+    public int getEndMinutes() {
 
         try {
-            String[] arrOfStr = value.split(":");
+            String[] arrOfStr = endMin.split(":");
+            //Toast.makeText(context,endMin,Toast.LENGTH_SHORT).show();
             return Integer.parseInt(arrOfStr[1]);
         }catch (NumberFormatException e){
             return 0;
@@ -198,7 +215,8 @@ public class VerticalTimeRangePicker implements CallbackListener {
     }
 
     @Override
-    public String getDate(String date) {
+    public String getDate() {
+        //Toast.makeText(context,date,Toast.LENGTH_SHORT).show();
         return date;
     }
 }

@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity{
         verticalTimeRangePicker.datePickerInit(datePicker);
         verticalTimeRangePicker.dateChanged();
 
+        //callbacks=========================
+
+        //verticalTimeRangePicker.getDate();
+        //verticalTimeRangePicker.getStartHour();
+        //verticalTimeRangePicker.getEndHour();
+        //verticalTimeRangePicker.getStartMinutes();
+        //verticalTimeRangePicker.getEndMinutes();
+
         timeRange.setOnRangeChangedListener(new OnRangeChangedListener() {
             @Override
             public void onRangeChanged(RangeSeekBar view, float leftValue, float rightValue, boolean isFromUser) {
