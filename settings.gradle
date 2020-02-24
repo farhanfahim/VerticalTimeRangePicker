@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':verticaltimerangepicker'
 rootProject.name='MyRangeSeekBar'
