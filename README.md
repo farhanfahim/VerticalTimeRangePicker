@@ -4,11 +4,8 @@ Vertical time Range picker is a unique Time picker with Date Picker.
 
 ## Android UI
 
-## Date Picker
-
 Date Picker Xml
 
-'''
 <DatePicker
             android:id="@+id/datePicker"
             android:layout_gravity="center"
@@ -22,13 +19,10 @@ Date Picker Xml
             android:scaleY="1.2"
             android:layout_marginBottom="20dp"
             android:datePickerMode="calendar" />
-'''
         
 <img src='images/Capture.PNG' height=480 width=300 />
 
-## Time Range Pciker
-
-### Time Range Picker Xml
+Time Range Picker Xml
 
  
 <img src='images/Capture1.PNG' height=480 width=300 />
