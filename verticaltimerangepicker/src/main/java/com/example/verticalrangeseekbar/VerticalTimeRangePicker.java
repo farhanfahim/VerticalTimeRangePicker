@@ -18,6 +18,7 @@ public class VerticalTimeRangePicker implements CallbackListener {
     private int value2 = 0;
     private int value3 = 0;
     private int value4 = 0;
+    private int day, month, year;
     private Context context;
 
     public VerticalTimeRangePicker(VerticalRangeSeekBar timeRange, DatePicker datePicker, Context context) {
@@ -30,6 +31,15 @@ public class VerticalTimeRangePicker implements CallbackListener {
     public void timeRangeInit( VerticalRangeSeekBar verticalRangeSeekBar){
         verticalRangeSeekBar.setIndicatorTextDecimalFormat("0.00 am");
         verticalRangeSeekBar.setProgress(12,12);
+    }
+
+    public void datePickerInit( DatePicker datePicker){
+        day = datePicker.getDayOfMonth();
+        month = datePicker.getMonth() + 1;
+        year = datePicker.getYear();
+
+        String date = (day + "/" + month + "/" + year);
+        getDate(date);
     }
 
     public void onRangeChangedValue(float leftValue, float rightValue){
@@ -136,9 +146,6 @@ public class VerticalTimeRangePicker implements CallbackListener {
             });
         }
     }
-
-
-
 
     @Override
     public void getProgressValues(String minValue, String maxValue) {
