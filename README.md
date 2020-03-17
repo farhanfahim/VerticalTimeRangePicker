@@ -61,7 +61,7 @@ Time Range Picker Xml
             app:rsb_tick_mark_text_margin="10dp"
             app:rsb_tick_mark_text_size="8sp" />
  
-<img src='images/Screenshot_1584429010.png' height=500 width=300 />
+<img src='images/Screenshot_1584429010.png' height=520 width=300 />
 
 ## Implementation
 
