@@ -100,40 +100,40 @@ public class VerticalTimeRangePicker implements CallbackListener {
             }
         }
 
-        if (v2 > 0 && v2 < 8) {
+        if (v2 > 0 && v2 <= 8) {
             seekBar.setIndicatorText(Math.round(v1)+":00 "+ period);
             value = Math.round(actualValue)+":00";
-        } else if (v2 > 8 && v2 < 16) {
+        } else if (v2 > 8 && v2 <= 16) {
             seekBar.setIndicatorText(Math.round(v1)+":05 "+ period);
             value = Math.round(actualValue)+":05";
-        } else if (v2 > 16 && v2 < 24) {
+        } else if (v2 > 16 && v2 <= 24) {
             seekBar.setIndicatorText(Math.round(v1)+":10 "+ period);
             value = Math.round(actualValue)+":10";
-        } else if (v2 > 24 && v2 < 32) {
+        } else if (v2 > 24 && v2 <= 32) {
             seekBar.setIndicatorText(Math.round(v1)+":15 "+ period);
             value = Math.round(actualValue)+":15";
-        } else if (v2 > 32 && v2 < 40) {
+        } else if (v2 > 32 && v2 <= 40) {
             seekBar.setIndicatorText(Math.round(v1)+":20 "+ period);
             value = Math.round(actualValue)+":20";
-        } else if (v2 > 40 && v2 < 48) {
+        } else if (v2 > 40 && v2 <= 48) {
             seekBar.setIndicatorText(Math.round(v1)+":25 "+ period);
             value = Math.round(actualValue)+":25";
-        } else if (v2 > 48 && v2 < 56) {
+        } else if (v2 > 48 && v2 <= 56) {
             seekBar.setIndicatorText(Math.round(v1)+":30 "+ period);
             value = Math.round(actualValue)+":30";
-        } else if (v2 > 56 && v2 < 64) {
+        } else if (v2 > 56 && v2 <= 64) {
             seekBar.setIndicatorText(Math.round(v1)+":35 "+ period);
             value = Math.round(actualValue)+":35";
-        } else if (v2 > 64 && v2 < 73) {
+        } else if (v2 > 64 && v2 <= 73) {
             seekBar.setIndicatorText(Math.round(v1)+":40 "+ period);
             value = Math.round(actualValue)+":40";
-        } else if (v2 > 73 && v2 < 82) {
+        } else if (v2 > 73 && v2 <= 82) {
             seekBar.setIndicatorText(Math.round(v1)+":45 "+ period);
             value = Math.round(actualValue)+":45";
-        } else if (v2 > 82 && v2 < 91) {
+        } else if (v2 > 82 && v2 <= 91) {
             seekBar.setIndicatorText(Math.round(v1)+":50 "+ period);
             value = Math.round(actualValue)+":50";
-        } else if (v2 > 91 && v2 < 100) {
+        } else if (v2 > 91 && v2 <= 100) {
             seekBar.setIndicatorText(Math.round(v1)+":55 "+ period);
             value = Math.round(actualValue)+":55";
         }else{
