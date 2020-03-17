@@ -20,7 +20,7 @@ Date Picker Xml
             android:layout_marginBottom="20dp"
             android:datePickerMode="calendar" />
         
-<img src='images/Screenshot_1584429000.PNG' height=480 width=300 />
+<img src='images/Screenshot_1584429000.png' height=480 width=300 />
 
 Time Range Picker Xml
 
@@ -61,7 +61,7 @@ Time Range Picker Xml
             app:rsb_tick_mark_text_margin="10dp"
             app:rsb_tick_mark_text_size="8sp" />
  
-<img src='images/Screenshot_1584429010.PNG' height=480 width=300 />
+<img src='images/Screenshot_1584429010.png' height=480 width=300 />
 
 ## Implementation
 
